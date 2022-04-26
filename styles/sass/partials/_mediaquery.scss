@@ -1,0 +1,25 @@
+@media (max-width: 550px) {
+    .navBar .wrapper {
+        flex-direction: column;
+    }
+
+    .navBar .logo {
+        margin-left: 0;
+    }
+
+    .logo,
+    .searchCart {
+        align-self: center;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+    
+    .headerImgContainer .wrapper{
+        width: 100vw;
+    
+    }
+};
