@@ -1,0 +1,48 @@
+// styles for product page
+
+.productsMainContent {
+    section {
+        padding:75px 0;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    // flex parent
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        // flex child
+        li {
+        // flex-basis controls the dimension of the flex CHILD
+
+        // because we are using the default flex direction value (row) the main axis of alignment is the x-axis therefore flex-basis will represent the width property
+            flex-basis: calc((100% / 3) - 30px);
+            margin: 5px 15px;
+            text-align: center;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+    }
+
+    .popularProduct {
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    // PLSFIX is there a more elegant solution to unapplying the CSS to the nested spn
+    .discountedPrice {
+        text-decoration: line-through;
+        color: rgba($color: $primary, $alpha: 0.5);
+        span {
+            // note that text-decoration does not apply to inline elements, so we need to change it to display:block
+            display: inline-block;
+            text-decoration: none;
+            color: rgba($color: $primary, $alpha: 1);
+        }
+    }
+}

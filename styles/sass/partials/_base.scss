@@ -74,6 +74,7 @@ button {
 }
 
 a {
+    display: inline-block;
     &.button {
         color: $primary;
         background-color: transparent;
@@ -95,4 +96,12 @@ a {
             color: $solidWhite;
         }
     }
+}
+
+// this ensures that image elements obey the dimensons of parents
+img {
+    // NOTE: this may need to be overwritten in further partials to be a width property (if image is not stretching to take up available space within parent container
+    // i.e. if an image is in portrait but its container is in landscape
+    max-width: 100%;
+    display: block;
 }
